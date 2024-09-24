@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.settings_page_day-and-night-settings #wpcontent {
+    padding-left: unset !important;
+}
+
+#v-head {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .03);
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 100px);
+}
+
+#v-head .v-head-logo img {
+    width: 130px;
+}
+
+#v-head .v-head-toggle .switch {
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 27px;
+}
+
+#v-head .v-head-toggle .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#v-head .v-head-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#v-head .v-head-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#v-head .v-head-toggle input:checked+.slider {
+    background-color: #01518b;
+}
+
+#v-head .v-head-toggle input:focus+.slider {
+    box-shadow: 0 0 1px #f6981d;
+}
+
+#v-head .v-head-toggle input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+#v-head .v-head-toggle{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+#v-head .v-head-toggle .save_settings{
+    background: #01518b;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 9px;
+    color: #ffffff;
+    cursor: pointer;
+}
+#v-head .v-head-toggle .reset_settings{
+    background: #ff4545;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 9px;
+    color: #ffffff;
+    cursor: pointer;
+}
+#v-head .v-head-toggle .slider.round {
+    border-radius: 34px;
+}
+
+#v-head .v-head-toggle .slider.round:before {
+    border-radius: 50%;
+}
+
+#v-head .v-head-toggle form {
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+/* container */
+
+.v-container {
+    padding: 30px;
+}
+.v-container .notice {
+    background: rgba( 250, 249, 249, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 19.5px );
+    -webkit-backdrop-filter: blur( 19.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: #ffffff;
+}
+.v-container .notice-dismiss::before{
+    color: #000000 !important;
+}
+.notice-success {
+    border-left: 4px solid #00a32a !important;
+}
+.notice-warning {
+    border-left: 4px solid #f6981d !important;
+}
+.notice-error {
+    border-left: 4px solid #f62c1d !important;
+}
+
+.v-container * {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+.v-container .notice,
+div.error,
+div.updated {
+    margin: 0 0 5px 0 !important;
+}
+
+.v-container .v-description {
+    color: #ffffff;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.v-container .v-form {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    padding: 20px;
+    color: #ffffff;
+}
+.v-form-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.v-container .v-form h3 {
+    font-weight: 400;
+}
+
+.v-container .v-form input,
+.v-container .v-form select {
+    border: 0;
+    color: #ffffff;
+    min-height: unset !important;
+    padding: 10px;
+    width: 100%;
+    max-width: unset;
+    background: #00000059;
+}
+.v-container .v-form input::placeholder{
+    color: #dddddd;
+}
+.v-container .v-form select{
+    background: #00000059 url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
+}
+
+.v-form-group {
+    width: 100%;
+    max-width: 45%;
+}
+
+.v-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.v-form-fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 47%;
+}
+
+.v-form-fields label,
+.v-form-fields input {
+    width: 100%;
+}
+
+.v-container form #submit {
+    background: #000000;
+    border: 0;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.v-container form #submit:hover {
+    background: #2e2e2e;
+    color: #ffffff;
+}
+
+.v-container table {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+
+.v-container th,
+.v-container td {
+    border: 1px solid #97979726;
+    background: #52525259;
+    padding: 8px;
+    text-align: left;
+    width: 50%;
+}
+
+.v-container table select {
+    border: 0 !important;
+    padding: 10px;
+    width: 100%;
+    max-width: unset;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.v-container th {
+    background: rgba( 0, 0, 0, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    padding: 20px;
+}
+
+/* .v-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+} */
+
+@media screen and (max-width: 1024px) {
+    .v-form-group {
+        width: 100%;
+        max-width: 60%;
+    }
+    .v-form-flex{
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .v-form-group {
+        width: 100%;
+        max-width: 100%;
+    }
+}
